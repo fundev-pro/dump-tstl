@@ -69,5 +69,10 @@ if (existsSync(licensePath)) {
     console.log('✓ LICENSE copied');
 }
 
+// Copy inspect.d.ts
+const inspectDtsPath = join(rootDir, 'src', 'inspect.d.ts');
+copyFileSync(inspectDtsPath, join(distDir, 'inspect.d.ts'));
+console.log('✓ inspect.d.ts copied');
+
 console.log('\n✓ Dist preparation completed');
 console.log('To publish, run: cd dist && npm publish');

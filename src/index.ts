@@ -1,3 +1,2 @@
-export default function hello() {
-    print('Hello, world!');
-}
+export * from './dump';
+export * from './inspect';
