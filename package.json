@@ -1,7 +1,8 @@
 {
     "name": "dump-tstl",
     "version": "1.0.0",
-    "description": "",
+    "description": "Debug utilities for TypeScript-to-Lua projects: pretty-print Lua tables with dump() and inspect() functions",
+    "keywords": ["typescript-to-lua", "tstl", "lua", "debug", "dump", "inspect"],
     "homepage": "https://github.com/fundev-pro/dump-tstl#readme",
     "bugs": {
         "url": "https://github.com/fundev-pro/dump-tstl/issues"

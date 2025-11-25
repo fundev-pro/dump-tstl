@@ -21,7 +21,7 @@ const packageJson = parse(packageJsonText) as {
 // Edit paths relative to dist
 let modifiedText = packageJsonText;
 
-// Remove "dist/" from paths
+// Remove "dist/" from paths and clean up unnecessary fields
 const edits = [
     // Remove "files" field to let .npmignore work
     ...modify(modifiedText, ['files'], undefined, {}),
@@ -36,9 +36,13 @@ const edits = [
     ...modify(
         modifiedText,
         ['main'],
-        packageJson.main?.replace(/^\.\/dist\//, './').replace(/\.lua$/, '') || './index',
+        packageJson.main?.replace(/^\.\/dist\//, './') || './index.lua',
         {}
     ),
+    // Remove devDependencies (not needed in published package)
+    ...modify(modifiedText, ['devDependencies'], undefined, {}),
+    // Remove development scripts (not needed in published package)
+    ...modify(modifiedText, ['scripts'], undefined, {}),
 ];
 
 // Apply all edits
