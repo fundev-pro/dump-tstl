@@ -1,0 +1,47 @@
+# Зависимости
+node_modules/
+
+# Скомпилированные файлы
+dist/
+
+# Логи
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Временные файлы операционной системы
+.DS_Store
+Thumbs.db
+
+# IDE и редакторы
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Переменные окружения
+.env
+.env.local
+.env.*.local
+
+# Кэш TypeScript
+*.tsbuildinfo
+
+# Turborepo
+.turbo/
+
+# Временные файлы
+tmp/
+temp/
+*.tmp
+
+# Coverage
+coverage/
+.nyc_output/
+

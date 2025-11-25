@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "types": ["lua-types/5.1"],
+        "rootDir": "src",
+        "outDir": "dist"
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "dist", "scripts"],
+    "tstl": {
+        "buildMode": "library",
+        "luaTarget": "5.1",
+        "luaLibImport": "require-minimal",
+        "noImplicitSelf": true,
+        "sourceMapTraceback": true,
+        "noHeader": true
+    }
+}
