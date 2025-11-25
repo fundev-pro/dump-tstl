@@ -14,7 +14,7 @@ This project is a TypeScript wrapper for the excellent [inspect.lua](http://gith
 ## Installation
 
 ```bash
-npm install dump-tstl
+npm install @fundev-pro/dump-tstl
 ```
 
 ## Usage
@@ -151,8 +151,11 @@ npm run rebuild
 # Prepare distribution files
 npm run prepare-dist
 
-# Create a package tarball for testing
+# Create a package tarball for testing (dry run)
 npm run pack
+
+# Publish to npm
+npm run publish
 ```
 
 The `prepare-dist` script:
@@ -160,6 +163,8 @@ The `prepare-dist` script:
 - Copies necessary files to `dist/`
 - Generates a clean `package.json` for publishing
 - Includes TypeScript definitions
+
+**Note:** Before publishing, make sure you are logged into npm (`npm login`)
 
 ### Code Quality
 

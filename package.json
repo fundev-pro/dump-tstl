@@ -1,5 +1,5 @@
 {
-    "name": "dump-tstl",
+    "name": "@fundev-pro/dump-tstl",
     "version": "1.0.0",
     "description": "Debug utilities for TypeScript-to-Lua projects: pretty-print Lua tables with dump() and inspect() functions",
     "keywords": ["typescript-to-lua", "tstl", "lua", "debug", "dump", "inspect"],
@@ -23,7 +23,8 @@
         "format:check": "prettier --check \"**/*.{ts,json}\"",
         "lint": "eslint . --ext .ts",
         "lint:fix": "eslint . --ext .ts --fix",
-        "pack": "npm run prepublishOnly && cd dist && npm pack"
+        "pack": "npm run prepublishOnly && cd dist && npm pack --dry-run",
+        "publish": "npm run prepublishOnly && cd dist && npm publish --access public"
     },
     "types": "./dist/index.d.ts",
     "main": "./dist/index.lua",
